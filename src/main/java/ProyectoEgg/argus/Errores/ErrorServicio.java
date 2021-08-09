@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProyectoEgg.argus.Entidades.Errores;
+package ProyectoEgg.argus.Errores;
 
 /**
  *
  * @author Agustin
  */
-public class errorServicio extends Exception {
+public class ErrorServicio extends Exception {
 
-    public errorServicio(String msn) {
+    public ErrorServicio(String msn) {
         super(msn);
     }
 }
