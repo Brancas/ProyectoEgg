@@ -1,5 +1,8 @@
 package ProyectoEgg.argus.entidades;
 
+import java.util.List;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -9,19 +12,20 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class Dispositivo {
 
+    @ManyToOne
     protected Marca marca;
-
+    @ManyToOne
     protected Modelo modelo;
-
-    protected Falla falla;
+    @ManyToMany
+    protected List<Falla> fallas;
 
     public Dispositivo() {
     }
 
-    public Dispositivo(Marca marca, Modelo modelo, Falla falla) {
+    public Dispositivo(Marca marca, Modelo modelo, List<Falla> fallas) {
         this.marca = marca;
         this.modelo = modelo;
-        this.falla = falla;
+        this.fallas = fallas;
     }
 
     public Marca getMarca() {
@@ -40,14 +44,14 @@ public abstract class Dispositivo {
         this.modelo = modelo;
     }
 
-    public Falla getFalla() {
-        return falla;
+    public List<Falla> getFallas() {
+        return fallas;
     }
 
-    public void setFalla(Falla falla) {
-        this.falla = falla;
+    public void setFallas(List<Falla> fallas) {
+        this.fallas = fallas;
     }
-    
-    
-    
+
+   
+
 }
