@@ -159,9 +159,10 @@ input[type="submit"]:hover {
 
 /* Buscador */
 .box {
-  position: absolute;
+  position: center;
   top: 50%;
   left: 50%;
+  margin-left: 50%;
   transform: translate(-50%, -50%);
 }
 
