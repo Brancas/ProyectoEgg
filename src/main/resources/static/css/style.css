@@ -1,61 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 50px;
+  padding: 0px;
   background: linear-gradient(120deg, #2980b9, #8e44ad);
   height: 100vh;
   overflow: hidden;
 }
 
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 38px;
+/*Scrollbar*/
+
+.contenedor {
+  margin: 0.25rem auto;
+  border: 1px solid none;
+  height: 520px;
+  width: auto;
+  max-width: 10000px;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
+
+.contenedor::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.contenedor::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/*Footer */
+
+.footer {
+  text-align: center;
+  color: white;
+}
+
+#footer {
+  position: fixed;
+  height: 30px;
+  background-color: black;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+/* Navbar */
 
 .left-side {
   display: flex;
 }
 
-.nav-wrapper > .left-side > div {
-  margin-right: 20px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+.nav {
+  background-color: black;
+  height: 80px;
+  align-items: center;
+  padding: 0 80px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-.nav-link-wrapper {
-  height: 22px;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.5s;
-}
-
-.active-nav-link {
-  border-bottom: 1px solid black;
-}
-
-.active-nav-link a {
-  color: black !important;
-}
-
-.nav-link-wrapper a {
-  color: #8a8a8a;
+.nav__link {
   text-decoration: none;
-  transition: color 0.5s;
+  color: #fff;
+  margin-left: 2em;
+  display: inline-block;
 }
 
-.nav-link-wrapper:hover {
-  border-bottom: 1px solid black;
+.nav__cta {
+  background: indianred;
+  columns: #fff;
+  text-decoration: none;
+  padding: 1em 3em;
+  display: inline-block;
+  border-radius: 50px;
 }
 
-.nav-link-wrapper a:hover {
-  color: black;
+.nav__cta--register {
+  background: indianred;
+  columns: #fff;
+  text-decoration: none;
+  padding: 1em 3em;
+  display: inline-block;
+  border-radius: 50px;
 }
+
+/*Esquema registro/login*/
 
 .center {
   position: absolute;
@@ -183,4 +243,49 @@ input.src:hover {
   background-color: #fff;
   border-color: #8c10b3;
   box-shadow: 0 0 5px #6dcff680;
+}
+
+/* Cartas Reparar*/
+
+.cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 60px 0;
+  gap: 2em;
+}
+
+.card {
+  padding-bottom: 2.5em;
+  width: 100%;
+  border-radius: 1em;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__texts {
+  padding: 1em;
+}
+
+.card__img {
+  background-image: var(--image);
+  height: 0px;
+  background-position: center top;
+  background-size: cover;
+  border-radius: 1em 1em 0 0;
+}
+
+.card__cta {
+  margin-left: 1em;
+  background: black;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 3em;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: auto;
 }
