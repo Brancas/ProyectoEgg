@@ -115,6 +115,10 @@ body {
   border-radius: 50px;
 }
 
+.nav__logo {
+  font-size: 15px;
+}
+
 /*Esquema registro/login*/
 
 .center {
@@ -219,10 +223,9 @@ input[type="submit"]:hover {
 
 /* Buscador */
 .box {
-  position: center;
+  position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -259,7 +262,7 @@ input.src:hover {
 
 .card {
   padding-bottom: 2.5em;
-  width: 100%;
+  width: 80%;
   border-radius: 1em;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -268,11 +271,13 @@ input.src:hover {
 
 .card__texts {
   padding: 1em;
+  text-align: center;
 }
 
 .card__img {
   background-image: var(--image);
-  height: 0px;
+  height: 10px;
+  align-items: center;
   background-position: center top;
   background-size: cover;
   border-radius: 1em 1em 0 0;
