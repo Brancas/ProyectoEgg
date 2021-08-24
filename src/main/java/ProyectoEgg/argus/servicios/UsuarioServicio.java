@@ -1,4 +1,4 @@
-package ProyectoEgg.argus.entidades.servicios;
+package ProyectoEgg.argus.servicios;
 
 import org.springframework.stereotype.Service;
 import ProyectoEgg.argus.entidades.Usuario;
