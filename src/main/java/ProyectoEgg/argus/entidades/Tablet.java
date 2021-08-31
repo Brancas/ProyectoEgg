@@ -1,6 +1,7 @@
 
 package ProyectoEgg.argus.entidades;
 
+
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 import org.hibernate.annotations.GenericGenerator;
 
 /**
@@ -19,6 +21,8 @@ public class Tablet extends Dispositivo{
  @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
+
+  
     private String id;
  
  @Temporal(TemporalType.TIMESTAMP)
@@ -61,5 +65,5 @@ public class Tablet extends Dispositivo{
         this.alta = alta;
     }
     
-    
+   
 }

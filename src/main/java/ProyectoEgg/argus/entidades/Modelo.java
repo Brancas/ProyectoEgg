@@ -1,7 +1,9 @@
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
+
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -14,14 +16,18 @@ import org.hibernate.annotations.GenericGenerator;
  * @author Agustin
  */
 
+
 @Entity
 public class Modelo {
+
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
+
     private String id;
     private String nombre;
+
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
@@ -30,6 +36,7 @@ public class Modelo {
     
     @ManyToOne
     private Marca marca;
+
 
     public Modelo(String id, String nombre, Marca marca) {
         this.id = id;
@@ -109,8 +116,7 @@ public class Modelo {
     public void setMarca(Marca marca) {
         this.marca = marca;
     }
-    
-    
+
     
     
     

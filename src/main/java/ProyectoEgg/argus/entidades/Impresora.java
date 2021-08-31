@@ -1,4 +1,5 @@
 
+
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
@@ -9,7 +10,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
-
+@Entity
 public class Impresora extends Dispositivo {
     @Id
     @GeneratedValue(generator = "uuid")
@@ -57,3 +58,4 @@ public class Impresora extends Dispositivo {
     }
     
 }
+

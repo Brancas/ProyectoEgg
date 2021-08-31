@@ -15,9 +15,11 @@ public abstract class Dispositivo {
     @ManyToOne
     protected Marca marca;
     @ManyToOne
+
     public Modelo modelo;
     @ManyToMany
     public List<Falla> fallas;
+
 
     public Dispositivo() {
     }
