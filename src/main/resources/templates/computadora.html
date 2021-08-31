@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static\css\style.css" />
+    <title>Fix</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__img">
+        <h1 class="nav__logo">ARGUS FIX</h1>
+      </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../static/css/style.css" rel="stylesheet" type="text/css">
-  
-  <title>Fix</title>
-</head>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+      </div>
 
-<body>
-  <nav class="nav">
-    <div class="nav__img">
-      <h1 class="nav__logo">ARGUS FIX</h1>
+      <div class="nav__buttons">
+        <a href="login.html" class="nav__cta">Login</a>
+        <a href="registro.html" class="nav__cta--register">Sign up</a>
+      </div>
+    </nav>
+    <div class="contenedor">
+      <h3>Elija el equipo a reparar</h3>
+
+      <!-- Contenedores -->
+
+      <section class="cards">
+        <div class="card">
+          <div class="card__img"></div>
+
+          <img
+            src="static\img\EQUIPOS\CELULARES\smartphone.png"
+            width="100"
+            height="100"
+            style="display: block; margin: 0 auto 0 auto"
+          />
+
+          <div class="card__texts">
+            <h2 class="card__title">Celular</h2>
+          </div>
+
+          <a href="#" class="card__cta">Entra aqui</a>
+        </div>
+
+        <div class="card">
+          <div class="card__img"></div>
+          <img
+            src="static\img\EQUIPOS\COMPUTADORAS\pngwing.com.png"
+            width="100"
+            height="100"
+            style="display: block; margin: 0 auto 0 auto"
+          />
+          <div class="card__texts">
+            <h2 class="card__title">Computadora</h2>
+          </div>
+
+          <a href="#" class="card__cta">Entra aqui</a>
+        </div>
+
+        <div class="card">
+          <div class="card__img"></div>
+          <img
+            src="static\img\EQUIPOS\SMART TV\television.png"
+            width="100"
+            height="100"
+            style="display: block; margin: 0 auto 0 auto"
+          />
+          <div class="card__texts">
+            <h2 class="card__title">Smart TV</h2>
+          </div>
+
+          <a href="#" class="card__cta">Entra aqui</a>
+        </div>
+
+        <div class="card">
+          <div class="card__img"></div>
+          <img
+            src="static\img\EQUIPOS\TABLETS\tablet.png"
+            width="100"
+            height="100"
+            style="display: block; margin: 0 auto 0 auto"
+          />
+          <div class="card__texts">
+            <h2 class="card__title">Tablets</h2>
+          </div>
+
+          <a href="#" class="card__cta">Entra aqui</a>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <p class="footer">Copyright &copy; ARGUSFIX® Derechos reservados</p>
+      </footer>
     </div>
-
-    <div class="nav__links">
-      <a href="index.html" class="nav__link">Home</a>
-      <a href="about.html" class="nav__link">About</a>
-    </div>
-
-    <div class="nav__buttons">
-      <a href="login.html" class="nav__cta">Login</a>
-      <a href="registro.html" class="nav__cta--register">Sign up</a>
-    </div>
-  </nav>
-  <div class="contenedor">
-    <h3>Elija el equipo a reparar</h3>
-
-    <!-- Contenedores -->
-
-    <section class="cards">
-      <div class="card">
-        <div class="card__img"></div>
-
-        <img src="static\img\EQUIPOS\CELULARES\smartphone.png" width="100" height="100"
-          style="display: block; margin: 0 auto 0 auto" />
-
-        <div class="card__texts">
-          <h2 class="card__title">Celular</h2>
-        </div>
-
-        <a href="#" class="card__cta">Entra aqui</a>
-      </div>
-
-      <div class="card">
-        <div class="card__img"></div>
-        <img src="static\img\EQUIPOS\COMPUTADORAS\pngwing.com.png" width="100" height="100"
-          style="display: block; margin: 0 auto 0 auto" />
-        <div class="card__texts">
-          <h2 class="card__title">Computadora</h2>
-        </div>
-
-        <a href="#" class="card__cta">Entra aqui</a>
-      </div>
-
-      <div class="card">
-        <div class="card__img"></div>
-        <img src="static\img\EQUIPOS\SMART TV\television.png" width="100" height="100"
-          style="display: block; margin: 0 auto 0 auto" />
-        <div class="card__texts">
-          <h2 class="card__title">Smart TV</h2>
-        </div>
-
-        <a href="#" class="card__cta">Entra aqui</a>
-      </div>
-
-      <div class="card">
-        <div class="card__img"></div>
-        <img src="static\img\EQUIPOS\TABLETS\tablet.png" width="100" height="100"
-          style="display: block; margin: 0 auto 0 auto" />
-        <div class="card__texts">
-          <h2 class="card__title">Tablets</h2>
-        </div>
-
-        <a href="#" class="card__cta">Entra aqui</a>
-      </div>
-    </section>
-
-    <footer id="footer">
-      <p class="footer">Copyright &copy; ARGUSFIX® Derechos reservados</p>
-    </footer>
-  </div>
-</body>
-
+  </body>
 </html>
+
+
