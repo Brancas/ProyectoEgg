@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ProyectoEgg.argus.entidades.Usuario;
  import ProyectoEgg.argus.errores.ErrorServicio;
 
@@ -8,6 +9,24 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioServicio {
+=======
+package ProyectoEgg.argus.servicios;
+
+import org.springframework.stereotype.Service;
+import ProyectoEgg.argus.entidades.Usuario;
+import ProyectoEgg.argus.errores.ErrorServicio;
+import ProyectoEgg.argus.repositorios.UsuarioRepositorio;
+import java.util.Date;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Service
+public class UsuarioServicio {
+
+    @Autowired
+    UsuarioRepositorio ur1;
+
+>>>>>>> 16f3ac8be56a586720b7c2d663fbdcecfda3a6fd
     public void crearUsuario(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
 
         Usuario usuario = new Usuario();
@@ -16,6 +35,7 @@ public class UsuarioServicio {
 
         usuario.setDocumento(documento);
         usuario.setNombre(nombre);
+<<<<<<< HEAD
 public class UsuarioServicio {
 
         if (documento == null) {
@@ -24,11 +44,27 @@ public class UsuarioServicio {
 //            if (validaIsbn(isbn)) {
 //                throw new ErrorServicio("El isbn ingresado ya esta asignado a otro libro");
 //            }
+=======
+        usuario.setClave(clave);
+        usuario.setEmail(email);
+
+        usuario.setAlta(new Date());
+
+        ur1.save(usuario);
+
+    }
+
+    public void validacion(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
+
+        if (documento == null) {
+            throw new ErrorServicio("Debe ingresar su DNI");
+>>>>>>> 16f3ac8be56a586720b7c2d663fbdcecfda3a6fd
         } else {
             validarDNI(documento);
         }
 
         if (nombre == null) {
+<<<<<<< HEAD
 public class UsuarioServicio {
         }
 
@@ -36,6 +72,20 @@ public class UsuarioServicio {
     
     public void modificarUsuario (Integer documento, String nombre, String clave, String email)throws ErrorServicio{
         
+=======
+            throw new ErrorServicio("Debe ingresar su Nombre completo");
+        }
+
+        if (clave == null) {
+            throw new ErrorServicio("Debe ingresar un clave");
+        }
+
+        if (email == null) {
+            throw new ErrorServicio("Debe ingresar un Email");
+        }
+
+    }
+>>>>>>> 16f3ac8be56a586720b7c2d663fbdcecfda3a6fd
 
     public void modificarUsuario(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
 
@@ -124,4 +174,8 @@ public class UsuarioServicio {
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 16f3ac8be56a586720b7c2d663fbdcecfda3a6fd
