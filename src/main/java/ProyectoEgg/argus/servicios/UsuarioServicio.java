@@ -1,7 +1,9 @@
+import ProyectoEgg.argus.entidades.Usuario;
  import ProyectoEgg.argus.errores.ErrorServicio;
 
 import java.util.Date;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 
 @Service
