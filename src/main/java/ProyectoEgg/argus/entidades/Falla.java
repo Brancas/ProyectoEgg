@@ -34,7 +34,7 @@ public class Falla {
     private Date baja;
 
     private double costoReparacion;
-<
+
 
     public Falla(String id, String nombre, double costoReparacion) {
         this.id = id;
