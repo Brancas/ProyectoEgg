@@ -1,4 +1,5 @@
 
+
 package ProyectoEgg.argus.errores;
 
 
@@ -8,3 +9,4 @@ public class ErrorServicio extends Exception{
         super(msn);
     }
 }
+
