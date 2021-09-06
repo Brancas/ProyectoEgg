@@ -27,8 +27,19 @@ public class Usuario {
     private Date baja;
 
     @OneToMany
-    private Dispositivo dispositivo;
+    private Telefono telefono;
+    
+    @OneToMany
+    private Tablet tablet;
+    
+    @OneToMany
+    private Tv tv;
+    
+    @OneToMany
+    private Impresora impresora;
 
+    
+    
     /**
      * @return the documento
      */
@@ -116,28 +127,74 @@ public class Usuario {
     /**
      * @return the dispositivo
      */
-    public Dispositivo getDispositivo() {
-        return dispositivo;
-    }
-
-    /**
-     * @param dispositivo the dispositivo to set
-     */
-    public void setDispositivo(Dispositivo dispositivo) {
-        this.dispositivo = dispositivo;
-    }
+    
 
     public Usuario() {
     }
 
-    public Usuario(Integer documento, String nombre, String clave, String email, Date alta, Date baja, Dispositivo dispositivo) {
+    public Usuario(Integer documento, String nombre, String clave, String email, Date alta, Date baja) {
         this.documento = documento;
         this.nombre = nombre;
         this.clave = clave;
         this.email = email;
         this.alta = alta;
         this.baja = baja;
-        this.dispositivo = dispositivo;
+    }
+
+    /**
+     * @return the telefono
+     */
+    public Telefono getTelefono() {
+        return telefono;
+    }
+
+    /**
+     * @param telefono the telefono to set
+     */
+    public void setTelefono(Telefono telefono) {
+        this.telefono = telefono;
+    }
+
+    /**
+     * @return the tablet
+     */
+    public Tablet getTablet() {
+        return tablet;
+    }
+
+    /**
+     * @param tablet the tablet to set
+     */
+    public void setTablet(Tablet tablet) {
+        this.tablet = tablet;
+    }
+
+    /**
+     * @return the tv
+     */
+    public Tv getTv() {
+        return tv;
+    }
+
+    /**
+     * @param tv the tv to set
+     */
+    public void setTv(Tv tv) {
+        this.tv = tv;
+    }
+
+    /**
+     * @return the impresora
+     */
+    public Impresora getImpresora() {
+        return impresora;
+    }
+
+    /**
+     * @param impresora the impresora to set
+     */
+    public void setImpresora(Impresora impresora) {
+        this.impresora = impresora;
     }
 
 }
