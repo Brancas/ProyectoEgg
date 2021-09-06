@@ -17,9 +17,12 @@ public class UsuarioServicio {
     @Autowired
     UsuarioRepositorio ur1;
 
+
     public void crearUsuario(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
 
         Usuario usuario = new Usuario();
+        
+        validacion(documento, nombre, clave, email);
 
 
         validacion(documento, nombre, clave, email);
@@ -27,6 +30,7 @@ public class UsuarioServicio {
 
         usuario.setDocumento(documento);
         usuario.setNombre(nombre);
+
         usuario.setClave(clave);
         usuario.setEmail(email);
 
@@ -43,14 +47,24 @@ public class UsuarioServicio {
         if (documento == null) {
             
             throw new ErrorServicio("Debe ingresar su DNI");
+
+        } else {
+            validarDNI(documento);
+
             
         } else {
             
             validarDNI(documento);
         
+
         }
 
         if (nombre == null) {
+
+    
+   
+        
+
             throw new ErrorServicio("Debe ingresar su Nombre completo");
         }
 
@@ -63,6 +77,8 @@ public class UsuarioServicio {
         }
 
     }
+
+
 
 
     public void modificarUsuario(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
@@ -139,7 +155,7 @@ public class UsuarioServicio {
             throw new ErrorServicio("El documento ingresado no se encuentra registrado.");
         }
 
-    }
+    
 
     public void validarDNI(Integer documento) throws ErrorServicio {
 
@@ -150,6 +166,9 @@ public class UsuarioServicio {
             throw new ErrorServicio("El Documento ingresado ya ha sido utilizado.");
 
         
+
     }
 
-}
+
+
+
