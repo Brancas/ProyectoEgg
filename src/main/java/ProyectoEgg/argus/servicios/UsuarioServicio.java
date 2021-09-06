@@ -1,5 +1,6 @@
 package ProyectoEgg.argus.servicios;
 
+
 import ProyectoEgg.argus.entidades.Usuario;
 import ProyectoEgg.argus.errores.ErrorServicio;
 import ProyectoEgg.argus.repositorios.UsuarioRepositorio;
@@ -8,6 +9,7 @@ import java.util.Date;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class UsuarioServicio {
@@ -19,12 +21,15 @@ public class UsuarioServicio {
 
         Usuario usuario = new Usuario();
 
+
         validacion(documento, nombre, clave, email);
+
 
         usuario.setDocumento(documento);
         usuario.setNombre(nombre);
         usuario.setClave(clave);
         usuario.setEmail(email);
+
         
         usuario.setAlta(new Date());
         
@@ -58,6 +63,7 @@ public class UsuarioServicio {
         }
 
     }
+
 
     public void modificarUsuario(Integer documento, String nombre, String clave, String email) throws ErrorServicio {
 
@@ -143,7 +149,7 @@ public class UsuarioServicio {
 
             throw new ErrorServicio("El Documento ingresado ya ha sido utilizado.");
 
-        }
+        
     }
 
 }

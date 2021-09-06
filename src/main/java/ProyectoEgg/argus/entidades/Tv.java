@@ -1,3 +1,4 @@
+
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
