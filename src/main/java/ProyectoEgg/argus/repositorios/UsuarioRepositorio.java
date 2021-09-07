@@ -8,9 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-
 public interface UsuarioRepositorio extends JpaRepository <Usuario, Integer >{
-
     
       @Query ("SELECT x FROM Libro x")
     public List<Usuario> ListadoUsuarios();
