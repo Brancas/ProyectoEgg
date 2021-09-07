@@ -1,9 +1,7 @@
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -15,7 +13,6 @@ import org.hibernate.annotations.GenericGenerator;
  *
  * @author Agustin
  */
-
 
 @Entity
 public class Marca {
@@ -95,5 +92,4 @@ public class Marca {
     }
     
     
-
 }
