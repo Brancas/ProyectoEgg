@@ -150,6 +150,6 @@ public class UsuarioServicio {
             throw new ErrorServicio("El Documento ingresado ya ha sido utilizado.");
 
         
-    }
+        }    }
 
 }
