@@ -1,6 +1,5 @@
 package ProyectoEgg.argus.entidades;
 
-
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -10,7 +9,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import org.hibernate.annotations.GenericGenerator;
 
 /**
@@ -23,8 +21,6 @@ public class Tablet {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-
-  
     private String id;
 
     @ManyToOne
@@ -87,7 +83,6 @@ public class Tablet {
     public void setAlta(Date alta) {
         this.alta = alta;
     }
-<<<<<<< HEAD
 
     /**
      * @return the marca
@@ -159,8 +154,4 @@ public class Tablet {
         this.baja = baja;
     }
 
-=======
-    
-   
->>>>>>> 555d8bf260a5fa6831a99e08ef8d8cb51a5d4945
 }
