@@ -1,3 +1,4 @@
+
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
@@ -97,3 +98,4 @@ public class Impresora {
 
     
 }
+
