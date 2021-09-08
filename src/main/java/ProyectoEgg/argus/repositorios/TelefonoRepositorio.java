@@ -11,6 +11,7 @@ import ProyectoEgg.argus.entidades.Usuario;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -20,7 +21,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TelefonoRepositorio extends JpaRepository <Telefono, String >{
     
-    @Query ("SELECT x FROM Telefono x")
-    public List<Usuario> ListadoUsuarios();
+    @Query("SELECT c FROM Telefono c WHERE c.usuario= :usuario")
+    public Telefono buscarPorUsuario(@Param("usuario") Integer documento);
     
 }
