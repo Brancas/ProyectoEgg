@@ -1,9 +1,8 @@
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
-
+import java.util.List;
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -11,16 +10,14 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- *
- * @author Agustin
- */
-
-
 @Entity
 public class Marca {
 
     @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+
     protected String nombre;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -29,71 +26,58 @@ public class Marca {
     protected Date baja;
 
     @OneToMany
-    protected Modelo modelo;
-
-    public Marca(String nombre) {
-        this.nombre = nombre;
-    }
+    protected List<Modelo> modelos;
 
     public Marca() {
     }
 
-    /**
-     * @return the nombre
-     */
+    public Marca(String id, String nombre, Date alta, Date baja, List<Modelo> modelos) {
+        this.id = id;
+        this.nombre = nombre;
+        this.alta = alta;
+        this.baja = baja;
+        this.modelos = modelos;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * @param nombre the nombre to set
-     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the alta
-     */
     public Date getAlta() {
         return alta;
     }
 
-    /**
-     * @param alta the alta to set
-     */
     public void setAlta(Date alta) {
         this.alta = alta;
     }
 
-    /**
-     * @return the baja
-     */
     public Date getBaja() {
         return baja;
     }
 
-    /**
-     * @param baja the baja to set
-     */
     public void setBaja(Date baja) {
         this.baja = baja;
     }
 
-    /**
-     * @return the modelo
-     */
-    public Modelo getModelo() {
-        return modelo;
+    public List<Modelo> getModelos() {
+        return modelos;
     }
 
-    /**
-     * @param modelo the modelo to set
-     */
-    public void setModelo(Modelo modelo) {
-        this.modelo = modelo;
+    public void setModelos(List<Modelo> modelos) {
+        this.modelos = modelos;
     }
-    
-    
 
+    
 }
