@@ -27,12 +27,12 @@ public class ImpresoraServicio {
         Impresora impresora = new Impresora() ;
         
         
-        impresora.setId(id);
-        impresora.setMarca(marca);
-        impresora.setModelo(modelo);
-        impresora.setFallas(fallas);
-        
-        impresora.setAlta(new Date());
+//        impresora.setId(id);
+//        impresora.setMarca(marca);
+////        impresora.setModelo(modelo);
+//        impresora.setFallas(fallas);
+//        
+//        impresora.setAlta(new Date());
         
         ir1.save(impresora);
         

@@ -1,35 +1,34 @@
+
 package ProyectoEgg.argus.entidades;
 
-import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.OneToMany;
 import org.hibernate.annotations.GenericGenerator;
 
+
 @Entity
-public class Modelo {
+public class Tipo {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
+
     private String nombre;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date alta;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date baja;
+    @OneToMany
+    private List<Marca> marcas;
 
-    public Modelo() {
+    public Tipo() {
     }
 
-    public Modelo(String id, String nombre, Date alta, Date baja) {
+    public Tipo(String id, String nombre, List<Marca> marcas) {
         this.id = id;
         this.nombre = nombre;
-        this.alta = alta;
-        this.baja = baja;
+        this.marcas = marcas;
     }
 
     public String getId() {
@@ -48,21 +47,15 @@ public class Modelo {
         this.nombre = nombre;
     }
 
-    public Date getAlta() {
-        return alta;
+    public List<Marca> getMarcas() {
+        return marcas;
     }
 
-    public void setAlta(Date alta) {
-        this.alta = alta;
+    public void setMarcas(List<Marca> marcas) {
+        this.marcas = marcas;
     }
-
-    public Date getBaja() {
-        return baja;
-    }
-
-    public void setBaja(Date baja) {
-        this.baja = baja;
-    }
-
     
-  }
+    
+
+
+}

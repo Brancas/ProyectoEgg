@@ -129,10 +129,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- *
- * @author Agustin
- */
 
 @Entity
 public class Falla {

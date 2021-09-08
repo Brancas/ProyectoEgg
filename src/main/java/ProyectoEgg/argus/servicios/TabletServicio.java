@@ -26,12 +26,12 @@ public class TabletServicio {
         Tablet tablet = new Tablet() ;
         
         
-        tablet.setId(id);
-        tablet.setMarca(marca);
-        tablet.setModelo(modelo);
-        tablet.setFallas(fallas);
-        
-        tablet.setAlta(new Date());
+//        tablet.setId(id);
+//        tablet.setMarca(marca);
+////        tablet.setModelo(modelo);
+//        tablet.setFallas(fallas);
+//        
+//        tablet.setAlta(new Date());
         
         tr1.save(tablet);
         

@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TelefonoRepositorio extends JpaRepository <Telefono, String >{
     
-    @Query("SELECT c FROM Telefono c WHERE c.usuario= :usuario")
-    public Telefono buscarPorUsuario(@Param("usuario") Integer documento);
+//    @Query("SELECT c FROM Telefono c WHERE c.usuario= :usuario")
+//    public Telefono buscarPorUsuario(@Param("usuario") Integer documento);
     
 }
