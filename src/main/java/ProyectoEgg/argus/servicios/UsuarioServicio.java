@@ -145,5 +145,11 @@ public class UsuarioServicio {
 
         }
     }
+    
+    public void elegirDispositivo() throws ErrorServicio {
+        
+        
+        
+    }
 
 }
