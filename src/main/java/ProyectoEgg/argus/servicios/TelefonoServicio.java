@@ -17,9 +17,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/*
 
- */
 @Service
 public class TelefonoServicio {
     
@@ -36,11 +34,11 @@ public class TelefonoServicio {
         
         telefono.setId(id);
         telefono.setMarca(marca);
-//        telefono.setModelo(modelo);
+        telefono.setModelo(modelo);
         telefono.setFallas(fallas);
         
-//        telefono.setUsuario(documento);
-        
+//        telefono.set; 
+        //"ERROR A RESOLVER"
         telefono.setAlta(new Date());
         
         telr1.save(telefono);
@@ -55,21 +53,21 @@ public class TelefonoServicio {
 
             Usuario usuario = respuesta.get();
             
-//            Telefono telefono = usuario.getTelefono();
+            Telefono telefono = usuario.getTelefono();
             
             
-//            if (telefono.getAlta() != null) {
-//
-//                telefono.setBaja(new Date());
-//
-//                telefono.setAlta(null);
-//
-//                telr1.save(telefono);
-//                
-//            } else {
-//
-//                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
-//            }
+            if (telefono.getAlta() != null) {
+
+                telefono.setBaja(new Date());
+
+                telefono.setAlta(null);
+
+                telr1.save(telefono);
+                
+            } else {
+
+                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
+            }
 
         } else {
 
@@ -86,21 +84,21 @@ public class TelefonoServicio {
 
             Usuario usuario = respuesta.get();
             
-//            Telefono telefono = usuario.getTelefono();
+            Telefono telefono = usuario.getTelefono();
             
             
-//            if (telefono.getBaja() != null) {
-//
-//                telefono.setAlta(new Date());
-//
-//                telefono.setBaja(null);
-//
-//                telr1.save(telefono);
-//                
-//            } else {
-//
-//                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
-//            }
+            if (telefono.getBaja() != null) {
+
+                telefono.setAlta(new Date());
+
+                telefono.setBaja(null);
+
+                telr1.save(telefono);
+                
+            } else {
+
+                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
+            }
 
         } else {
 

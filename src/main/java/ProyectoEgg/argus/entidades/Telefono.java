@@ -29,8 +29,8 @@ public class Telefono {
     @ManyToMany
     private List<Falla> fallas;
 
-//    @ManyToOne
-//    private Usuario usuario;
+    @ManyToOne
+    private Usuario usuario;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
