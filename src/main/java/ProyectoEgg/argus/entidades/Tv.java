@@ -1,5 +1,6 @@
 package ProyectoEgg.argus.entidades;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -7,18 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- *
- * @author Agustin
- */
+
 @Entity
 public class Tv {
-
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -33,6 +29,9 @@ public class Tv {
     @ManyToMany
     private List<Falla> fallas;
 
+    @ManyToOne
+    protected Usuario usuario;
+      
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
 
@@ -41,15 +40,15 @@ public class Tv {
 
     public Tv() {
     }
+    
 
-    public Tv(String id, Marca marca, Modelo modelo, List<Falla> fallas, Date alta, Date baja) {
+    public Tv(String id, Marca marca, Modelo modelo, ArrayList<Falla> fallas, Usuario usuario) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.fallas = fallas;
-        this.alta = alta;
-        this.baja = baja;
-    }
+        this.usuario = usuario;
+    } 
 
     public String getId() {
         return id;
@@ -83,6 +82,14 @@ public class Tv {
         this.fallas = fallas;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     public Date getAlta() {
         return alta;
     }
@@ -98,6 +105,5 @@ public class Tv {
     public void setBaja(Date baja) {
         this.baja = baja;
     }
-
     
 }

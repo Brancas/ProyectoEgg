@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
@@ -29,8 +28,8 @@ public class Telefono {
     @ManyToMany
     private List<Falla> fallas;
 
-//    @ManyToOne
-//    private Usuario usuario;
+    @ManyToOne
+    protected Usuario usuario;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
@@ -41,13 +40,20 @@ public class Telefono {
     public Telefono() {
     }
 
-    public Telefono(String id, Marca marca, Modelo modelo, List<Falla> fallas, Date alta, Date baja) {
+    public Telefono(String id, Marca marca, Modelo modelo, List<Falla> fallas, Usuario usuario) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
-        this.fallas = fallas;
-        this.alta = alta;
-        this.baja = baja;
+        this.fallas = fallas;       
+        this.usuario = usuario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public String getId() {

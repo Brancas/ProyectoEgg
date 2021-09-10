@@ -21,12 +21,12 @@ public class UsuarioServicio {
 
         validacion(documento, nombre, clave, email);
 
-//        usuario.setDocumento(documento);
-//        usuario.setNombre(nombre);
-//        usuario.setClave(clave);
-//        usuario.setEmail(email);
-//        
-//        usuario.setAlta(new Date());
+        usuario.setDocumento(documento);
+        usuario.setNombre(nombre);
+        usuario.setClave(clave);
+        usuario.setEmail(email);
+        
+        usuario.setAlta(new Date());
         
         ur1.save(usuario);
         
@@ -69,9 +69,9 @@ public class UsuarioServicio {
 
             Usuario usuario = respuesta.get();
 
-//            usuario.setNombre(nombre);
-//            usuario.setClave(clave);
-//            usuario.setEmail(email);
+            usuario.setNombre(nombre);
+            usuario.setClave(clave);
+            usuario.setEmail(email);
 
             ur1.save(usuario);
 
@@ -89,17 +89,17 @@ public class UsuarioServicio {
 
             Usuario usuario = respuesta.get();
 
-//            if (usuario.getAlta() != null) {
-//
-//                usuario.setBaja(new Date());
-//
-//                usuario.setAlta(null);
-//
-//                ur1.save(usuario);
-//            } else {
-//
-//                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
-//            }
+            if (usuario.getAlta() != null) {
+
+                usuario.setBaja(new Date());
+
+                usuario.setAlta(null);
+
+                ur1.save(usuario);
+            } else {
+
+                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
+            }
 
         } else {
 
@@ -116,17 +116,17 @@ public class UsuarioServicio {
 
             Usuario usuario = respuesta.get();
 
-//            if (usuario.getBaja() != null) {
-//
-//                usuario.setAlta(new Date());
-//
-//                usuario.setBaja(null);
-//
-//                ur1.save(usuario);
-//            } else {
-//
-//                throw new ErrorServicio("El usuario ingresado ya se encuentra habilitado.");
-//            }
+            if (usuario.getBaja() != null) {
+
+                usuario.setAlta(new Date());
+
+                usuario.setBaja(null);
+
+                ur1.save(usuario);
+            } else {
+
+                throw new ErrorServicio("El usuario ingresado ya se encuentra habilitado.");
+            }
 
         } else {
 
