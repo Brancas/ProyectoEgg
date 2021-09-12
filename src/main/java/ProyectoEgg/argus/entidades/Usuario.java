@@ -128,6 +128,10 @@ public class Usuario {
         this.impresoras = impresoras;
     }
 
+    public Telefono getTelefono() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 
 }
