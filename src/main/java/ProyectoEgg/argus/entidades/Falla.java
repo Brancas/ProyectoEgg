@@ -1,22 +1,33 @@
+
 package ProyectoEgg.argus.entidades;
 
 import java.util.Date;
+
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ *
+ * @author Agustin
+ */
+
 
 @Entity
 public class Falla {
 
+
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
+
     private String id;
     private String nombre;
+
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
@@ -24,6 +35,7 @@ public class Falla {
     private Date baja;
 
     private double costoReparacion;
+
 
     public Falla(String id, String nombre, double costoReparacion) {
         this.id = id;
@@ -103,8 +115,7 @@ public class Falla {
     public void setCostoReparacion(double costoReparacion) {
         this.costoReparacion = costoReparacion;
     }
-    
-    
-    
+   
     
 }
+
