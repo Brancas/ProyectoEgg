@@ -39,7 +39,7 @@ public class TelefonoServicio {
 //        telefono.setModelo(modelo);
         telefono.setFallas(fallas);
         
-//        telefono.setUsuario(documento);
+        telefono.setUsuario(documento);
         
         telefono.setAlta(new Date());
         
