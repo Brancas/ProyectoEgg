@@ -18,7 +18,5 @@ public class ControladorTelefono {
     @Autowired
     private UsuarioServicio usuarioServicio;
     
-    @PostMapping("/registro_celular")
-    public String 
-    
+   
 }
