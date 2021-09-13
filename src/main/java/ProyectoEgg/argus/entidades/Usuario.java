@@ -1,5 +1,6 @@
 package ProyectoEgg.argus.entidades;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -8,15 +9,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- *
- * @author Agustin
- */
 @Entity
 public class Usuario {
 
     @Id
-    private Integer documento;
+    protected Integer documento;
     private String nombre;
     private String clave;
     private String email;
@@ -128,6 +125,5 @@ public class Usuario {
         this.impresoras = impresoras;
     }
 
-    
-
+  
 }
