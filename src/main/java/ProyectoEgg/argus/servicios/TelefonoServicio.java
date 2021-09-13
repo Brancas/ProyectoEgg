@@ -36,10 +36,10 @@ public class TelefonoServicio {
         
         telefono.setId(id);
         telefono.setMarca(marca);
-//        telefono.setModelo(modelo);
+        telefono.setModelo(modelo);
         telefono.setFallas(fallas);
         
-//        telefono.setUsuario(documento);
+        telefono.setUsuario(documento);
         
         telefono.setAlta(new Date());
         
@@ -55,21 +55,21 @@ public class TelefonoServicio {
 
             Usuario usuario = respuesta.get();
             
-//            Telefono telefono = usuario.getTelefono();
+            Telefono telefono = usuario.getTelefono();
             
             
-//            if (telefono.getAlta() != null) {
-//
-//                telefono.setBaja(new Date());
-//
-//                telefono.setAlta(null);
-//
-//                telr1.save(telefono);
-//                
-//            } else {
-//
-//                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
-//            }
+            if (telefono.getAlta() != null) {
+
+                telefono.setBaja(new Date());
+
+                telefono.setAlta(null);
+
+                telr1.save(telefono);
+                
+            } else {
+
+                throw new ErrorServicio("El usuario ingresado ya se encuentra inhabilitado.");
+            }
 
         } else {
 
