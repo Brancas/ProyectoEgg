@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ImpresoraRepositorio extends JpaRepository <Impresora, String >{
     
-    @Query ("SELECT x FROM Telefono x")
-    public List<Usuario> ListadoUsuarios();
+//    @Query ("SELECT x FROM Telefono x")
+//    public List<Usuario> ListadoUsuarios();
     
 }
