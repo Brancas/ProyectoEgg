@@ -28,15 +28,11 @@ public class TelefonoServicio {
     @Autowired
     private MarcaRepositorio mr1;
 
-    Marca x = new Marca();
-
-    public void crearTelefono(String id,  Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
+    public void crearTelefono(Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
 
         Telefono telefono = new Telefono();
-
-        telefono.setId(id);
         
-        telefono.setMarca();
+        telefono.setMarca(marca);
 //        llenarMarca(id);
         telefono.setModelo(modelo);
         telefono.setFallas(fallas);
@@ -121,13 +117,13 @@ public class TelefonoServicio {
 
     }
 
-    public Marca llenarMarca(String marca) {
-        Marca m1 = new Marca();
-
-        m1.setId(marca);
-
-        x = m1;
-        
-        return x;
-    }
+//    public Marca llenarMarca(String marca) {
+//        Marca m1 = new Marca();
+//
+//        m1.setId(marca);
+//
+//        x = m1;
+//        
+//        return x;
+//    }
 }

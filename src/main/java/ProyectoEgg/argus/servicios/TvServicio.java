@@ -25,11 +25,10 @@ public class TvServicio {
     @Autowired
     UsuarioRepositorio ur1;
     
-   public void crearTv(String id, Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
+   public void crearTv(Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
 
         Tv tv = new Tv();
-
-        tv.setId(id);
+        
         tv.setMarca(marca);
         tv.setModelo(modelo);
         tv.setFallas(fallas);
