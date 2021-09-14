@@ -63,19 +63,19 @@ public class ControladorGral {
 
     }
 
-    @PostMapping("/reparar/crearCelular")
-    public String llenarMarca(String marca) {
-        try {
-            marca = "Alcatel" ;
-            telefonoServicio.llenarMarca(marca);
-        } catch (Exception e) {
-            
-            return "Error404.html";
-        }
-        
-//        Escribí "ModeloAcatel" solo porque no hay uno genérico.
-
-        return "modeloAcatel.html";
-     
-    }
+//    @PostMapping("/reparar/crearCelular")
+//    public String llenarMarca(String marca) {
+//        try {
+//            marca = "Alcatel" ;
+//            telefonoServicio.llenarMarca(marca);
+//        } catch (Exception e) {
+//            
+//            return "Error404.html";
+//        }
+//        
+////        Escribí "ModeloAcatel" solo porque no hay uno genérico.
+//
+//        return "modeloAcatel.html";
+//     
+//    }
 }

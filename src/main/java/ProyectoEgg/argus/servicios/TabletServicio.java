@@ -25,11 +25,10 @@ public class TabletServicio {
     @Autowired
     private UsuarioRepositorio ur1;
     
-  public void crearTablet(String id, Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
+  public void crearTablet(Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
 
         Tablet tablet = new Tablet();
-
-        tablet.setId(id);
+        
         tablet.setMarca(marca);
         tablet.setModelo(modelo);
         tablet.setFallas(fallas);
