@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/celular")
+@RequestMapping("/telefono")
 public class ControladorTelefono {
     
     @Autowired
@@ -18,6 +18,6 @@ public class ControladorTelefono {
     @Autowired
     private UsuarioServicio usuarioServicio;
     
-    
+    @PostMapping("/")
    
 }

@@ -1,6 +1,7 @@
 package ProyectoEgg.argus.controladores;
 
 import ProyectoEgg.argus.errores.ErrorServicio;
+import ProyectoEgg.argus.servicios.TelefonoServicio;
 import ProyectoEgg.argus.servicios.UsuarioServicio;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +19,8 @@ public class ControladorUsuario {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
-  
+
+    
     @PostMapping("/registrar")
     public String registrar(@RequestParam Integer documento, @RequestParam String nombre, @RequestParam String clave, @RequestParam String email){
         try {
