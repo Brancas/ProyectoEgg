@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping
@@ -63,11 +64,18 @@ public class ControladorGral {
     }
 
     @PostMapping("/reparar/crearCelular")
-    public String crearId() {
+    public String llenarMarca(String marca) {
         try {
-            telefonoServicio.crearTelefono(id);
+            marca = "Alcatel" ;
+            telefonoServicio.llenarMarca(marca);
         } catch (Exception e) {
+            
+            return "Error404.html";
         }
+        
+//        Escribí "ModeloAcatel" solo porque no hay uno genérico.
+
+        return "modeloAcatel.html";
      
     }
 }
