@@ -1,91 +1,16 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <head>
     <meta charset="utf-8" />
     <title>Sign up</title>
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="static\css\style.css" />
-=======
-    <link rel="stylesheet" href="../static/css/style.css" />
-
-
-    <title>Register Form</title>
-    <link rel="stylesheet" href="../static/css/style.css" />
-
->>>>>>> Stashed changes
-  </head>
-  <body>
-
-    <nav class="nav">
-      <div class="nav__img">
-        <h1 class="nav__logo"> ARGUS FIX</h1>
-      </div> 
-
-
-      <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
-       
-       
-      </div>
-
-      <div class="nav__buttons">
-        <a href="login.html" class="nav__cta">Login</a> 
-        <a href="registro.html" class="nav__cta--register">Sign up</a>
-      </div>
-    </nav>
-
-    <div class="center">
-      <h1>Sign Up</h1>
-
-      <form method="post">
-        <div class="txt_field">
-          <input type="email" required />
-          <span></span>
-          <label>Email</label>
-        </div>
-        <div class="txt_field">
-          <input type="celphone" required />
-          <span></span>
-          <label>Celphone</label>
-        </div>
-        <div class="txt_field">
-          <input type="text" required />
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required />
-          <span></span>
-          <label>Password</label>
-        </div>
- 
- 
-       
-        <input type="submit" value="Sign up" />
- 
-      </form>
-    </div>
-    <!-- Footer-->            
-    <footer id="footer"><p class="footer">Copyright &copy; ARGUSFIX® Derechos reservados</p></footer>
-  </footer>
-  </body>
-</html>
-=======
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Sign up</title>
-    <link rel="stylesheet" href="static\css\style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
 
 
     <title>Register Form</title>
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
   </head>
   <body>
@@ -97,46 +22,47 @@
 
 
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
+        <a th:href="@{/}" class="nav__link">Home</a>
+        <a th:href="@{/about}" class="nav__link">About</a>
        
        
       </div>
 
       <div class="nav__buttons">
-        <a href="login.html" class="nav__cta">Login</a> 
-        <a href="registro.html" class="nav__cta--register">Sign up</a>
+        <a th:href="@{/login}" class="nav__cta">Login</a> 
+        <a th:href="@{/registro}" class="nav__cta--register">Sign up</a>
       </div>
     </nav>
 
     <div class="center">
       <h1>Sign Up</h1>
 
-      <form method="post">
+      <form th:action="@{/usuario/registrar}" method="POST">
         <div class="txt_field">
-          <input type="email" required />
+          <input type="number" required  name="documento"/>
           <span></span>
-          <label>Email</label>
+          <label>Documento</label>
         </div>
         <div class="txt_field">
-          <input type="celphone" required />
+          <input type="text" required  name="nombre"/>
           <span></span>
-          <label>Celphone</label>
+          <label>Nombre y Apellido</label>
         </div>
         <div class="txt_field">
-          <input type="text" required />
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required />
+          <input type="password" required  name="clave"/>
           <span></span>
           <label>Password</label>
-        </div>
+        </div> 
+        <div class="txt_field">
+          <input type="email" required name="email" />
+          <span></span>
+          <label>Email</label>
+        </div> 
+      
  
- 
-       
+         
         <input type="submit" value="Sign up" />
+       <!-- <a href="reparar.html"></a>-->
  
       </form>
     </div>
@@ -145,4 +71,4 @@
   </footer>
   </body>
 </html>
->>>>>>> c718537d1478b29df40c494d94551c4385f5bb5a
+

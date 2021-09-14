@@ -14,7 +14,7 @@ public class FallaServicio {
     @Autowired
     FallaRepositorio fr1;
     
-    public void crearFalla(String id, String nombre, double costoReparacion) throws ErrorServicio {
+    public void crearFalla(String nombre, double costoReparacion) throws ErrorServicio {
         
         
         

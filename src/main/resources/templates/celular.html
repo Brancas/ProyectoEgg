@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/css/style.css" />
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
     <title>Fix</title>
   </head>
@@ -17,13 +17,13 @@
       </div>
 
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
+        <a th:href="@{/}" class="nav__link">Home</a>
+        <a th:href="@{/about}" class="nav__link">About</a>
       </div>
 
       <div class="nav__buttons">
         <a href="login.html" class="nav__cta">Login</a>
-        <a href="registro.html" class="nav__cta--register">Sign up</a>
+        <a th:href="@{/registro}" class="nav__cta--register">Sign up</a>
       </div>
     </nav>
     <div class="contenedor">
@@ -46,7 +46,7 @@
             <h2 class="card__title">Alcatel</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloAcatel.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -63,7 +63,7 @@
             <h2 class="card__title">Apple</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloApple.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -80,7 +80,7 @@
             <h2 class="card__title">Blackberry</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloBlackberry.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -97,7 +97,7 @@
             <h2 class="card__title">Huawei</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloHuawei.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -114,7 +114,7 @@
             <h2 class="card__title">Motorola</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloMotorola.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -131,7 +131,7 @@
             <h2 class="card__title">Nokia</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloNokia.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -148,7 +148,7 @@
             <h2 class="card__title">Xiaomi</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloXiaomi.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -165,7 +165,7 @@
             <h2 class="card__title">SonyXperia</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloSonyXperia.html" class="card__cta">Entra aqui</a>
         </div>
 
         <div class="card">
@@ -182,7 +182,7 @@
             <h2 class="card__title">Nexus</h2>
           </div>
 
-          <a href="registro_celular.html" class="card__cta">Entra aqui</a>
+          <a href="modeloNexus.html" class="card__cta">Entra aqui</a>
 
     <!-- Footer-->            
     <footer id="footer"><p class="footer">Copyright &copy; ARGUSFIX® Derechos reservados</p></footer>

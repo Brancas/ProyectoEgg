@@ -16,7 +16,7 @@ public class ModeloServicio {
     @Autowired
     ModeloRepositorio mr1;
     
-    public void crearModelo(String id, String nombre, Marca marca) throws ErrorServicio {
+    public void crearModelo(String nombre, Marca marca) throws ErrorServicio {
         
         
         
