@@ -35,18 +35,13 @@ public class TelefonoServicio {
         Telefono telefono = new Telefono();
 
         telefono.setId(id);
-        telefono.setMarca(x);
+        
+        telefono.setMarca();
 //        llenarMarca(id);
         telefono.setModelo(modelo);
         telefono.setFallas(fallas);
-<<<<<<< HEAD
-        
-        telefono.setUsuario(documento);
-        
-=======
         telefono.getUsuario();
 
->>>>>>> a92f29d3787a0b3ff4738047a417ff2d4e8f1b1b
         telefono.setAlta(new Date());
 
         telr1.save(telefono);
@@ -126,11 +121,13 @@ public class TelefonoServicio {
 
     }
 
-    public void llenarMarca(String marca) {
+    public Marca llenarMarca(String marca) {
         Marca m1 = new Marca();
 
         m1.setId(marca);
 
         x = m1;
+        
+        return x;
     }
 }
