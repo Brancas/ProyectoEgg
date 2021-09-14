@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <head>
     <meta charset="utf-8" />
     <title>Login Form</title>
     <link rel="stylesheet" href="static\css\style.css" />
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
 
 
@@ -20,15 +20,15 @@
 
 
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
+        <a th:href="@{/}" class="nav__link">Home</a>
+        <a th:href="@{/about}" class="nav__link">About</a>
        
        
       </div>
 
       <div class="nav__buttons">
-        <a href="login.html" class="nav__cta">Login</a> 
-        <a href="registro.html" class="nav__cta--register">Sign up</a>
+        <a th:href="@{/login}" class="nav__cta">Login</a> 
+        <a th:href="@{/registro}" class="nav__cta--register">Sign up</a>
       </div>
     </nav>
 
