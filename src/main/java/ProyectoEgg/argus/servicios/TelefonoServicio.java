@@ -6,6 +6,7 @@ import ProyectoEgg.argus.entidades.Modelo;
 import ProyectoEgg.argus.entidades.Telefono;
 import ProyectoEgg.argus.entidades.Usuario;
 import ProyectoEgg.argus.errores.ErrorServicio;
+import ProyectoEgg.argus.repositorios.MarcaRepositorio;
 import ProyectoEgg.argus.repositorios.TelefonoRepositorio;
 import ProyectoEgg.argus.repositorios.UsuarioRepositorio;
 import java.util.ArrayList;
@@ -24,12 +25,18 @@ public class TelefonoServicio {
     @Autowired
     private UsuarioRepositorio ur1;
 
-    public void crearTelefono(String id, Marca marca, Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
+    @Autowired
+    private MarcaRepositorio mr1;
+
+    Marca x = new Marca();
+
+    public void crearTelefono(String id,  Modelo modelo, List<Falla> fallas, Integer documento) throws ErrorServicio {
 
         Telefono telefono = new Telefono();
 
         telefono.setId(id);
-        telefono.setMarca(marca);
+        telefono.setMarca(x);
+//        llenarMarca(id);
         telefono.setModelo(modelo);
         telefono.setFallas(fallas);
         telefono.getUsuario();
@@ -113,4 +120,11 @@ public class TelefonoServicio {
 
     }
 
+    public void llenarMarca(String marca) {
+        Marca m1 = new Marca();
+
+        m1.setId(marca);
+
+        x = m1;
+    }
 }

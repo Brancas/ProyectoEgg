@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/css/style.css" />
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
     <title>Fix</title>
   </head>
@@ -17,13 +17,13 @@
       </div>
 
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
+        <a th:href="@{/}" class="nav__link">Home</a>
+        <a th:href="@{/about}" class="nav__link">About</a>
       </div>
 
       <!-- <div class="nav__buttons">
         <a href="login.html" class="nav__cta">Login</a>
-        <a href="registro.html" class="nav__cta--register">Sign up</a>
+        <a th:href="@{/registro}" class="nav__cta--register">Sign up</a>
       </div> -->
     </nav>
     <div class="contenedor">
