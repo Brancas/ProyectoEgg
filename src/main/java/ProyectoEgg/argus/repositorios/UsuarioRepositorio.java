@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UsuarioRepositorio extends JpaRepository <Usuario, Integer >{
     
-     @Query ("SELECT x FROM usuario x WHERE x.documento= :documento")
+     @Query ("SELECT x FROM Usuario x WHERE x.documento= :documento")
    public List<Usuario> listadoUsuarios(@Param("documento")Integer documento);
     
 }
